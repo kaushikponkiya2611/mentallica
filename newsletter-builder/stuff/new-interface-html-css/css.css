@@ -1,0 +1,88 @@
+#sidebar-wrapper {
+	margin-left: -100px;
+	left: 80px;
+	width: 80px;
+	background: #222;
+	position: fixed;
+	height: 100%;
+	z-index: 10000;
+	transition: all .4s ease 0s;
+}
+
+#sidebar_menu li a, .sidebar-nav li a {
+	color: #ffffff;
+	display: block;
+	float: left;
+	width: 80px;
+	background: #252525;
+}
+
+.sidebar-nav {
+	display: block;
+	float: left;
+	width: 80px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar-nav li {
+	height: 50px;
+	text-indent: 20px;
+}
+
+.sidebar-nav li a {
+	color: #ffffff;
+	display: block;
+	text-decoration: none;
+}
+
+#sidebar-opzioni {
+	margin-left: 60px;
+	width: 250px;
+	background: #dedede;
+	position: absolute;
+	z-index: 9999;
+	height: 100%;
+	display: none;
+	overflow-y: auto;
+}
+
+#sidebar-editor {
+	width: 350px;
+	background: #dedede;
+	position: absolute;
+	z-index: 9999;
+	height: 100%;
+	display: none;
+	padding: 10px;
+	overflow: auto;
+	right: 0;
+	margin-top: -95px;
+}
+
+#wrapper {
+	margin-right: 100px !important;
+}
+
+#page-content-wrapper {
+	padding-left: 0;
+	margin-left: 80px;
+	width: 100%;
+}
+
+.active {
+	margin-left: 330px !important;
+	margin-right: -300px !important;
+}
+
+.elemento {
+	background: #ffffff;
+	border: 1px solid #cccccc;
+	padding: 10px;
+	margin: 5px;
+}
+
+.canvas {
+	padding: 10px;
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Email Editor documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+
+		<h3 class="center alt">&ldquo;Email editor&rdquo; Documentation by &ldquo;persefone_it&rdquo; v2.0</h3>
+
+		<hr>
+
+		<h1 class="center">&ldquo;Email editor&rdquo;</h1>
+
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 09/09/2015<br>
+					By: persefone_it<br>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->
+
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing Email editor.  <br>
+
+					it's a drag & drop email editor script in javascript Jquery and php built for developer. You can simply integrate this script in your web project and create custom email template with drag & drop. <br>
+
+					If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/persefone_it">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+
+		<hr>
+
+		<div class="container">
+	<br><br>
+	<br>
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous">
+
+
+<br><div style="padding-top:15px;padding-bottom:5px;min-height:50px !important;border-bottom:1px solid #cccccc"><div class="row"><div class="col-md-10"><strong style="font-size:15px">Requirements and installation</strong> </div><div class="col-md-2"></div></div></div><ul style="display:block;" id="div_22"><li>Installation and configuration</li><li>Html and js structure</li><li>JavaScript Libraries</li></ul><div style="padding-top:15px;padding-bottom:5px;min-height:50px !important;border-bottom:1px solid #cccccc"><div class="row"><div class="col-md-10"><strong style="font-size:15px">Elements</strong> </div><div class="col-md-2"></div></div></div><ul style="display:block;" id="div_23"><li>Where are stored the templates and previews saved? </li><li>Re-edit the templates stored</li><li>Create custom element</li></ul>
+	<br><br>
+	<hr>
+	<br><br>
+
+	<h3>Installation and configuration</h3><div style="text-align:justify"><p><strong>Server requirements</strong></p>
+	<p>It's necessary a web server that support php (for example Apache). It can be Windows or linux server. There aren't special libraries to load, just a server with php support.&nbsp;<br><br><strong>Installation</strong></p>
+	<p>Upload all files and folders with FTP software like filezilla in your website and set chmod 777 to "tmp" and "images" folder.&nbsp;<br><br><strong>Configuration</strong></p>
+	<p>Exist a config file called "config.php". let it point to the installation folder or leave it blank if it's installed in the root path&nbsp;</p>
+	<pre>&lt;?php<br>$path = "http://www.yourwebsite.com/editor/";</pre></div><h3>Html and js structure</h3><div style="text-align:justify"><p><strong><img src="http://assistenza.persefone.it/files/kb/emaileditor/emaileditor-html-structure.jpg" alt="" width="250" height="422"></strong></p>
+	<ul>
+	<li><strong>config.php&nbsp;</strong>it's the configuration file<strong>.</strong></li>
+	<li><strong>save-drop-img.php php</strong> file to save in "images" folder the image dropped to image element</li>
+	<li><strong>select.php</strong> read elements from "elements" folder and populate the sidebar</li>
+	<li><strong>save_source.php&nbsp;</strong>it's file that saves all code without css.</li>
+	<li><strong>save.php&nbsp;</strong>it's file that saves all code (html + css) of email created<strong>.</strong></li>
+	<li><strong>videotoimg.php </strong>return a image with the preview of youtube video</li>
+	<li><strong>media-popup.php</strong> list image of "images" folder</li>
+	<li><strong>index.php</strong>&nbsp;it's the main file that contain html, javascript and css files.</li>
+	<li><strong>template.html</strong>&nbsp;it contains the css style and a tag {body} that will be replaced with the body of created template email</li>
+	</ul></div><h3>JavaScript Libraries</h3><div style="text-align:justify"><ul>
+	<li>http://feather.aviary.com/js/feather.js</li>
+	<li>js/jquery.min.js</li>
+	<li>jquery-ui.min.js</li>
+	<li>jquery.ui.touch-punch.min.js</li>
+	<li>bootstrap.min.js</li>
+	<li>tinymce/tinymce.min.js</li>
+	<li>colpick.js</li>
+	</ul></div><h3>Where are stored the templates and previews saved? </h3><div style="text-align:justify"><p>In "tmp" folder. The final template with complete css is saved in files called with "template_" prefix. The only body of email without css is saved in files called with "body_" prefix.&nbsp;</p>
+	<pre>                        template_xxxx.html
+	 </pre>
+	<p>contains all html template included css</p>
+	<pre>
+	                        body_xxxxx.html
+	  </pre>
+	<p>contains all html template except css&nbsp;</p></div><h3>Re-edit the templates stored</h3><div style="text-align:justify"><p>It's possible. You can call index.php in this way</p>
+	<pre>                      index.php?filename=body_1451200148.html
+	</pre>
+	<p><br>where body_1451200148.html it's the file name of body contents saved&nbsp;</p></div><h3>Create custom element</h3><div style="text-align:justify"><p>You can create a custom element of following type:</p>
+	<p>&nbsp;</p>
+	<table width="100%">
+	<tbody>
+	<tr>
+	<td>
+	<p><img src="http://assistenza.persefone.it/files/kb/emaileditor/txt1.jpg" alt="" width="210" height="120"></p>
+	<p>text</p>
+	</td>
+	<td>
+	<p><img src="http://assistenza.persefone.it/files/kb/emaileditor/title.jpg" alt="" width="210" height="120"></p>
+	<p>title</p>
+	</td>
+	<td>
+	<p><img src="http://assistenza.persefone.it/files/kb/emaileditor/video1.jpg" alt="" width="210" height="120"></p>
+	<p>video</p>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<p>&nbsp;<img src="http://assistenza.persefone.it/files/kb/emaileditor/social.jpg" alt="" width="210" height="120"></p>
+	<p>social</p>
+	</td>
+	<td>
+	<p>&nbsp;<img src="http://assistenza.persefone.it/files/kb/emaileditor/button1.jpg" alt="" width="210" height="120"></p>
+	<p>tools</p>
+	</td>
+	<td>
+	<p><img src="http://assistenza.persefone.it/files/kb/emaileditor/image2txt.jpg" alt="" width="210" height="120"></p>
+	<p>image / image+text&nbsp;</p>
+	</td>
+	</tr>
+	</tbody>
+	</table>
+	<p>&nbsp;</p>
+	<p>in the "elements" folder there are 6 folders</p>
+	<p><img src="http://assistenza.persefone.it/files/kb/emaileditor/elements.jpg" alt="" width="150" height="181"></p>
+	<p>in every folder there are one or more html files with the blocks to add at the editor.</p>
+	<p>if you want add a custom element, you must create a new html file with this structure:</p>
+	<p>&nbsp;</p>
+	<p><iframe style="width: 100%;" src="https://codepen.io/persefone_it/embed/VjKGEo/?height=265&amp;theme-id=0&amp;default-tab=html&amp;embed-version=2" height="265" frameborder="no" scrolling="no" allowfullscreen="true">See the Pen &amp;amp;amp;amp;lt;a href="http://codepen.io/persefone_it/pen/VjKGEo/" data-mce-href="http://codepen.io/persefone_it/pen/VjKGEo/"&amp;amp;amp;amp;gt;example of emaileditor element&amp;amp;amp;amp;lt;/a&amp;amp;amp;amp;gt; by sandro (&amp;amp;amp;amp;lt;a href="http://codepen.io/persefone_it" data-mce-href="http://codepen.io/persefone_it"&amp;amp;amp;amp;gt;@persefone_it&amp;amp;amp;amp;lt;/a&amp;amp;amp;amp;gt;) on &amp;amp;amp;amp;lt;a href="http://codepen.io" data-mce-href="http://codepen.io"&amp;amp;amp;amp;gt;CodePen&amp;amp;amp;amp;lt;/a&amp;amp;amp;amp;gt;.
+	</iframe></p>
+	<p><strong>Image preview</strong></p>
+	<p><strong><img src="http://assistenza.persefone.it/files/kb/emaileditor/sidebarelemento.jpg" alt="" width="250" height="391"></strong></p>
+	<p>to set the preview image of element that appear when user click on sidebar menu, you must insert the path of images in preview class div</p>
+	<p><iframe style="width: 100%;" src="https://codepen.io/persefone_it/embed/dXpqQB/?height=265&amp;theme-id=0&amp;default-tab=html&amp;embed-version=2" height="265" frameborder="no" scrolling="no" allowfullscreen="true">See the Pen &amp;amp;amp;lt;a href="http://codepen.io/persefone_it/pen/dXpqQB/" data-mce-href="http://codepen.io/persefone_it/pen/dXpqQB/"&amp;amp;amp;gt;emaileditor preview&amp;amp;amp;lt;/a&amp;amp;amp;gt; by sandro (&amp;amp;amp;lt;a href="http://codepen.io/persefone_it" data-mce-href="http://codepen.io/persefone_it"&amp;amp;amp;gt;@persefone_it&amp;amp;amp;lt;/a&amp;amp;amp;gt;) on &amp;amp;amp;lt;a href="http://codepen.io" data-mce-href="http://codepen.io"&amp;amp;amp;gt;CodePen&amp;amp;amp;lt;/a&amp;amp;amp;gt;.
+	</iframe></p>
+	<p><strong>Html content</strong></p>
+	<p>The content of block it's in view class div. Every element must stay inside a table. this table has how class "main".</p>
+	<p>Every element can be one or these type:</p>
+	<ul>
+	<li>data-type=“image”</li>
+	<li>data-type=“title”</li>
+	<li>data-type=“line”</li>
+	<li>data-type=“text-block”</li>
+	<li>data-type=“button”</li>
+	<li>data-type="imgtxt"</li>
+	<li>data-type=“imgtxtcol”</li>
+	<li>data-type=“imgtxtincol”</li>
+	<li>data-type=“social-links"</li>
+	<li>data-type=“video”</li>
+	</ul>
+	<p>in this example i have used&nbsp; data-type="imgtxt"</p>
+	<p>&nbsp;</p>
+	<p><iframe style="width: 100%;" src="https://codepen.io/persefone_it/embed/wWzEOg/?height=265&amp;theme-id=0&amp;default-tab=html&amp;embed-version=2" height="265" frameborder="no" scrolling="no" allowfullscreen="true">See the Pen &amp;amp;lt;a href="http://codepen.io/persefone_it/pen/wWzEOg/" data-mce-href="http://codepen.io/persefone_it/pen/wWzEOg/"&amp;amp;gt;emaileditor htmlelement&amp;amp;lt;/a&amp;amp;gt; by sandro (&amp;amp;lt;a href="http://codepen.io/persefone_it" data-mce-href="http://codepen.io/persefone_it"&amp;amp;gt;@persefone_it&amp;amp;lt;/a&amp;amp;gt;) on &amp;amp;lt;a href="http://codepen.io" data-mce-href="http://codepen.io"&amp;amp;gt;CodePen&amp;amp;lt;/a&amp;amp;gt;.
+	</iframe></p></div>
+	    <br>
+
+			<h3>Upgrade from vs 1 to vs 2</h3>
+
+			Substitute all files except "tmp" and config.php. <br />
+
+			if you have images in "images" folder, please backup and recopy in images folder
+<br /><br />
+
+	  </div>
+
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+
+<br>
+For further informations visit: <a href="http://www.emaileditor.net">http://www.emaileditor.net</a>
+
+		<p class="append-bottom alt large"><strong>Sandro</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

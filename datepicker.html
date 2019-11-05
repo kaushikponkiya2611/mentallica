@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<!-- Include Required Prerequisites -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+		 
+		<!-- Include Date Range Picker -->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	</head>
+
+	<body>
+		
+	<div class="date-range">
+		<input type="text" name="datefilter" value="" />
+	</div>
+ 
+<script type="text/javascript">
+
+	$(function() {
+	  $('input[name="datefilter"]').daterangepicker({
+	      autoUpdateInput: false,
+	      locale: {
+	          cancelLabel: 'cancel'
+	      }
+	  });
+	  $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+	      $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
+	  });
+	  $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+	      $(this).val('');
+	  });
+	});
+
+</script>
+</body>
+</html>

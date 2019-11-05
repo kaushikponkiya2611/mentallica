@@ -1,0 +1,26 @@
+29 june 2016
+
+version 2 released
+
+update 4
+29 march 2016
+
+fixed editor tinymce with more control
+add link to image
+
+update 3
+27 dec 2015
+
+can re-edit the content of email save. (index.php?filename=body_1451200148.html)
+
+update 2
+
+fixed a problem with title and subtilte that when you change the text, inserted a paragraph inside H2 or h4 tag.
+same problem with block img+text 
+
+update 1
+
+fixed small bugs
+add possibility to upload image inside img in the editor with drag&drop
+add fotogallery to upload and choose files
+remove base64  icons for social instead of absolute image path

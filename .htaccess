@@ -1,0 +1,36 @@
+RewriteEngine On
+
+RewriteCond %{SERVER_PORT} 80 
+#RewriteRule ^(.*)$ https://mentallica.com/projectone/$1 [R=301,L]
+RewriteRule ^/projectone/$1 [R=301,L]
+RewriteCond %{REQUEST_URI} "/admin/" [OR]
+RewriteCond %{REQUEST_URI} "/radios/" [OR]
+RewriteCond %{REQUEST_URI} "/Timeline/" [OR]
+RewriteCond %{REQUEST_URI} "/paypal/"
+RewriteRule (.*) $1 [L]
+
+RewriteRule ^([A-Za-z0-9-%]+)/?$ index.php?pid=$1 [NC,L] # Handle category request
+RewriteRule ^([A-Za-z0-9-%]+)/([A-Za-z0-9-%]+)/?$ index.php?pid=$1&workid=$2 [NC,L] # Handle category request
+RewriteRule ^([A-Za-z0-9-%]+)/([A-Za-z0-9-%]+)/([A-Za-z0-9-%]+)/?$ index.php?pid=$1&workid=$2&thirdid=$3 [NC,L] # Handle category request
+RewriteRule ^([A-Za-z0-9-%]+)/([A-Za-z0-9-%]+)/([A-Za-z0-9-%]+)/([A-Za-z0-9-%]+)/?$ index.php?pid=$1&workid=$2&thirdid=$3&subidone=$4 [NC,L] # Handle category request
+RewriteRule ^([A-Za-z0-9-%]+)/([A-Za-z0-9-%]+)/([A-Za-z0-9-%]+)/([A-Za-z0-9-%]+)/([A-Za-z0-9-%]+)/?$ index.php?pid=$1&workid=$2&thirdid=$3&subidone=$4&subidtwo=$5 [NC,L] # Handle category request
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule (.*) $1\.php [L]
+
+#RewriteCond %{THE_REQUEST} (\s|%20)
+RewriteRule ^([^\s%20]+)(?:\s|%20)+(.*)$ /$1-$2 [R=301,L]
+RewriteRule ^([^\s%20]+)(?:\s|%20)+([^\s%20]+)((?:\s|%20)+.*)$ $1-$2-$3 [N,DPI]
+RewriteRule ^([^\s%20]+)(?:\s|%20)+([^\s%20]+)+([^\s%20]+)((?:\s|%20)+.*)$ $1-$2-$3-$4 [N,DPI]
+RewriteRule ^([^\s%20]+)(?:\s|%20)+([^\s%20]+)+([^\s%20]+)+([^\s%20]+)((?:\s|%20)+.*)$ $1-$2-$3-$4-$5 [N,DPI]
+
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+
+#RewriteCond %{HTTPS} !on
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}/
+RewriteRule . /index.php [L]
+

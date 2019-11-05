@@ -1,0 +1,1719 @@
+/*!
+ * Bootstrap v3.0.3 (http://getbootstrap.com)
+ * Copyright 2013 Twitter, Inc.
+ * Licensed under http://www.apache.org/licenses/LICENSE-2.0
+ */
+
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+
+@font-face {
+    font-family:'Open Sans';
+    src: url('../fonts/Open Sans Bold.eot');
+	src: url('../fonts/Open Sans Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Open Sans Bold.woff2') format('woff2'),
+		url('../fonts/Open Sans Bold.woff') format('woff'),
+		url('../fonts/Open Sans Bold.svg#Open Sans Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2074;
+}
+
+@font-face {
+    font-family:'Open Sans';
+    src: url('../fonts/Open Sans Bold Italic.eot');
+	src: url('../fonts/Open Sans Bold Italic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Open Sans Bold Italic.woff2') format('woff2'),
+		url('../fonts/Open Sans Bold Italic.woff') format('woff'),
+		url('../fonts/Open Sans Bold Italic.svg#Open Sans Bold Italic') format('svg');
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: normal;
+    unicode-range: U+0020-2074;
+}
+
+@font-face {
+    font-family:'Open Sans';
+    src: url('fonts/Open Sans Italic.eot');
+	src: url('fonts/Open Sans Italic.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Open Sans Italic.woff2') format('woff2'),
+		url('fonts/Open Sans Italic.woff') format('woff'),
+		url('fonts/Open Sans Italic.svg#Open Sans Italic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+    unicode-range: U+0020-2074;
+}
+
+@font-face {
+    font-family:'Open Sans';
+    src: url('../fonts/Open Sans.eot');
+	src: url('../fonts/Open Sans.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Open Sans.woff2') format('woff2'),
+		url('../fonts/Open Sans.woff') format('woff'),
+		url('../fonts/Open Sans.svg#Open Sans') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2212;
+}
+@font-face {
+    font-family:'Open Sans Semibold';
+    src: url('../fonts/Open Sans Semibold.eot');
+	src: url('../fonts/Open Sans Semibold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Open Sans Semibold.woff2') format('woff2'),
+		url('../fonts/Open Sans Semibold.woff') format('woff'),
+		url('../fonts/Open Sans Semibold.svg#Open Sans Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2074;
+}
+
+@font-face {
+    font-family:'Open Sans Semibold';
+    src: url('fonts/Open Sans Semibold Italic.eot');
+	src: url('fonts/Open Sans Semibold Italic.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Open Sans Semibold Italic.woff2') format('woff2'),
+		url('fonts/Open Sans Semibold Italic.woff') format('woff'),
+		url('fonts/Open Sans Semibold Italic.svg#Open Sans Semibold Italic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: normal;
+    unicode-range: U+0020-2074;
+}
+
+@font-face {
+    font-family:'Open Sans Light';
+    src: url('fonts/Open Sans Light.eot');
+	src: url('fonts/Open Sans Light.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Open Sans Light.woff2') format('woff2'),
+		url('fonts/Open Sans Light.woff') format('woff'),
+		url('fonts/Open Sans Light.svg#Open Sans Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2212;
+}
+
+@font-face {
+    font-family:'Open Sans Light';
+    src: url('fonts/Open Sans Light Italic.eot');
+	src: url('fonts/Open Sans Light Italic.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Open Sans Light Italic.woff2') format('woff2'),
+		url('fonts/Open Sans Light Italic.woff') format('woff'),
+		url('fonts/Open Sans Light Italic.svg#Open Sans Light Italic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    unicode-range: U+0020-2074;
+}
+
+@font-face {
+    font-family:'Open Sans Extrabold';
+    src: url('fonts/Open Sans Extrabold.eot');
+	src: url('fonts/Open Sans Extrabold.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Open Sans Extrabold.woff2') format('woff2'),
+		url('fonts/Open Sans Extrabold.woff') format('woff'),
+		url('fonts/Open Sans Extrabold.svg#Open Sans Extrabold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2074;
+}
+
+@font-face {
+    font-family:'Open Sans Extrabold';
+    src: url('fonts/Open Sans Extrabold Italic.eot');
+	src: url('fonts/Open Sans Extrabold Italic.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Open Sans Extrabold Italic.woff2') format('woff2'),
+		url('fonts/Open Sans Extrabold Italic.woff') format('woff'),
+		url('fonts/Open Sans Extrabold Italic.svg#Open Sans Extrabold Italic') format('svg');
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: normal;
+    unicode-range: U+0020-2074;
+}
+
+body
+{
+	background:#fff !important;
+}
+.portfolio-item
+{
+	/*background:#e5e5e5;*/
+	border-radius: 10px;
+	margin-bottom:10px;
+}
+.portfolio-item h3
+{
+	text-align:center;
+	margin:0px;
+	font-size:25px;
+	font-family:'Open Sans';
+	color:#333333;
+	font-weight:700;
+	padding:8px 0;
+}
+.artists-favorite-text h1
+{
+	color:#0072bb;
+    font-family: "Open Sans Semibold";
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+.artists-favorite-text h1:after{
+	background:#0072bb;
+    content: "";
+    height: 5px;
+    left: 27px;
+    position: absolute;
+    right: 0;
+    top:70px;
+    width: 80px;
+}
+.artists-favorite-text p
+{
+	font-size:13px;
+	color:#4f4f4f;
+	margin-bottom:20px;
+	font-weight:400;
+	line-height:25px;
+	font-family:'Open Sans';
+} 
+.art-swapping-hands-text-slider
+{
+	background:#f8f8f8;
+	/*margin-bottom:50px;*/
+	padding-top:20px;
+	padding-bottom:30px;
+}
+.art-swapping-hands-text h1
+{
+	font-size: 30px;
+font-family: 'Open Sans Semibold';
+font-weight: 600;
+margin-top: 0;
+border-bottom: 2px solid;
+padding-bottom: 15px;
+}
+a.navbar-brand {
+    display: inline-block;
+}
+.banner-and-text{
+	margin: 0 0 30px;
+}
+.hidecls, .hidecls.show
+{
+
+}
+.header-main{
+	background:#c7edfc;
+	padding:0;
+}
+.hidecls.show {
+    top: -35px !important;
+}
+.portfolio-item-images {
+    /*border: 1px solid #6b6b6b;
+    !*height: 220px;*!
+	height: 150px;
+    margin: 0 20px;*/
+	height: 220px;
+}
+.rot-cat-banner-imgs video
+{
+	width:100%;
+	margin:22px 0 0;
+}
+.artists-favorite-text{
+	margin-bottom: 20px;
+    padding:30px 10px 0;
+    text-align: left;
+}
+.portfolio-item-point01 {
+    /*float: left;
+	margin-left:20px;
+	margin-bottom:20px;
+	margin-top:20px;*/
+	float: left;
+	margin-left:20px;
+	margin-bottom:10px;
+	margin-top:0px;
+}
+.portfolio-item-point02 {
+    float: right;
+	margin-bottom:10px;
+	margin-top:0px;
+	margin-right:20px;
+}
+.clear {
+    clear: both;
+}
+.navbar-brand-main
+{
+	float:left;
+	padding:5px 0px;
+}
+
+.navbar-brand
+{
+	padding:0px;
+}
+.navbar-nav > li > a {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #000;
+    font-family: 'Open Sans Semibold';
+    padding: 5px 0px;
+    margin: 12px 11px;
+}
+.navbar-nav > li.active > a
+{border-bottom:1px solid;
+	border-top:1px solid;
+	
+}
+.navbar-nav > li > a:hover
+{
+	background:none;
+}
+.footer-main{
+	background-color:#C7EDFC;
+	/*margin-top:20px;*/
+	padding:20px 0 15px;
+	position:relative;
+}
+.bottom-footer {
+	background-color: #9bd3e9;
+    border-top: 1px solid #dadada;
+	overflow:hidden;
+   /* padding-top: 13px;
+    display: inline-block;
+    width: 100%;
+	margin-top: 20px;*/
+}
+.bottom-footer p{
+	text-align:center;
+	color:#004e97;
+	font-family:'Open Sans';
+	font-weight:400;
+	font-size:14px;
+	padding:15px 0 5px;
+}
+.artwork-to-the-world-texts p
+{
+	line-height:20px;
+	font-family:'Open Sans';
+	color:#000;
+	font-size:14px;
+}
+.footer-button {
+    display: table-cell;
+    width: 235px;
+    text-align: center;
+}
+.footer-button-img01
+{
+	height:101px;
+	width:101px;
+	margin:auto;
+	background:src('../img/mentallica-radio.png');
+	display:inline-block;
+}
+.footer-button-title h4
+{
+	margin-top:0px;
+	color:#0072bb;
+	font-size:22px;
+	font-family: 'Open Sans Semibold';
+	padding:10px 0;
+}
+.artwork-to-the-world-texts h4
+{
+	margin-top:0px;
+	color:#0072bb;
+	font-size:22px;
+	font-family: 'Open Sans Semibold';
+	padding:10px 0;
+}
+.connect-link ul li
+{
+	display:inline-block;
+	margin: 0 2px;
+}
+.footer-link-title h4
+{
+	font-family: 'Open Sans Semibold';
+	font-size:20px;
+	color:#0072bb;
+	text-align:left;
+	margin-bottom: 20px;
+	
+}
+.art-swapping-hands-text p
+{
+	font-size:14px;
+	  font-family:'Open Sans';
+	  line-height:25px;
+}
+.footer-link ul
+{
+	text-align:left;
+	list-style:none;
+}
+.footer-link ul li {
+   /* display: inline-block;
+    border-left: 1px solid;
+    line-height: 10px;
+    padding-left: 10px;
+    margin-left: 10px;*/
+}
+.btn-sm
+{
+	font-size:14px;
+}
+.footer-link {
+    margin-top:0px;
+}
+.footer-link ul li:first-child
+{
+	padding-left:0px;
+	margin-left:0px;
+	border-left:0px;
+}
+.footer-link ul li a{
+	color: #000;
+    display: inline-block;
+    font-family: "Open Sans";
+    font-size: 14px;
+    padding: 5px 0;
+    text-transform: uppercase;
+}
+.footer-link ul li a:hover{
+	color:#336699;
+}
+.mc-embedded-subscribe-form {
+   margin-top: 30px;
+position: relative;
+margin-bottom: 30px;
+}
+.mc-embedded-subscribe-form input
+{
+	background:#f4f4f4;
+	border:none;
+	height:45px;
+	border:5px;
+	font-size:16px;
+	border-radius:5px  !important;
+	font-family:'Open Sans';
+}
+.submit-wrap button
+{
+	background:#0482e0;
+	color:#FFF;
+	height:45px;
+	width:149px;
+	font-family:'Open Sans';
+	text-align:center;
+	display:inline-block;
+	font-size:18px;
+	border-radius:0 5px 5px 0;
+}
+.submit-wrap
+{
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+.navbar-nav > li {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+.connect-link ul
+{
+	text-align:left;
+}
+.navbar-brand-main .navbar-toggle
+{
+	float:right;
+}
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 30px;
+    height: 5px;
+    border-radius: 1px;
+    background-color: #000;
+}
+.navbar-toggle {
+    padding: 0;
+    margin-right: 0px;
+    margin-top: 30px;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+/* The sticky */
+.sidebar_right {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+
+
+@media screen and (max-width:767px){
+	.navbar-collapse.navbar-menubuilder
+	{
+		width:100%;
+		float:inherit;
+		clear: both;
+		padding:0px;
+	}
+	.navbar-nav > li.active > a
+	{
+		border:none;
+	}
+	.navbar-nav
+	{
+		float:inherit;
+	}
+	.navbar-nav > li:last-child
+	{
+		border-bottom:none;
+	}
+	.navbar-nav > li
+	{
+		display:block;
+		width:100%;
+		border-bottom: 1px solid;
+	}
+	.navbar-nav > li > a
+	{
+		margin: 5px 0px;
+	}
+	button.follow-mentallica
+	{
+		margin:15px 0;
+	}
+	.portfolio-item h3
+	{
+		padding:8px 0;
+		font-size:20px;
+		text-align: center !important;
+	}
+	/*.clearfix.rot-cat-usr-imgs {
+    	min-height: 71px !important;
+	}*/
+.portfolio-item-point01, .portfolio-item-point02
+{	margin-bottom: 0px;
+    margin-top: -10px;
+	
+}
+	.portfolio-item-images	{
+		/*height: 75px;
+		margin: 0 20px;
+		padding: 1px;*/
+	}
+}
+
+audio::-internal-media-controls-download-button {
+    display:none;
+}
+
+audio::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+
+audio::-webkit-media-controls-panel {
+    width: calc(100% + 30px); /* Adjust as needed */
+}
+
+ #aPlayer > audio { width: 100% }
+        /* Chrome 29+ */
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+       /* HIDE DOWNLOAD AUDIO BUTTON */
+     #aPlayer {
+           overflow: hidden;width: 390px; 
+        }
+
+    #aPlayer > audio { width: 420px; }
+}
+
+/* Chrome 22-28 */
+@media screen and(-webkit-min-device-pixel-ratio:0) {
+    
+      #aPlayer {
+           overflow: hidden;width: 390px; 
+        }
+
+    #aPlayer > audio { width: 420px; }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 680px) {
+	.logo-main > img {
+		width: 100%;
+		float: left;
+	}
+	.content{
+		margin: 25px 0 0;
+	}
+	.page-header {
+		margin:0px 0 20px 0 !important;
+	}
+}
+.logo-main{
+	width: 100%;
+}
+@media only screen and (max-width: 767px) {
+	.logo-main{
+		width: 75%;
+		float: left;
+	}
+	.navbar-toggle{
+		padding: 4px;
+		margin-top:0; !important;
+	}
+	.portfolio-item h3 {
+		font-size: 14px;
+		word-wrap: break-word;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		width: 100%;
+		/*overflow: hidden;*/
+	}
+
+	.header-main-sub{
+		/*box-shadow: 0 0 3px #000;*/
+		position: fixed;
+		z-index: 999;
+		width: 100%;
+	}
+	.navbar-brand-main	{
+		float:left;
+		padding:5px 0 15px;
+		width: 80%;
+	}
+	.navbar-brand > img{
+		width: 280px !important;
+		margin: 2px -10px 0 !important;
+	}
+	.navbar-toggle{
+		padding: 12px 0 0;
+	}
+	.portfolio-item-images	{
+		height: 107px;
+		padding: 1px;
+	}
+	.gallery-images{
+		height: 80px !important;
+		width: 80px !important;
+		margin: 0 auto;
+	}
+	.header-main {
+		display: inline-block;
+		/*overflow-y: scroll;
+		overflow-x: hidden;*/
+	}
+	.home_page_logo{
+		margin: 10px 0;
+	}
+	.addsubimages{
+		min-height:95px !important;
+	}
+}
+
+/*30-04-2017 Manish Vora Start */
+.header-main-sub{
+	/*box-shadow: 0 0 3px #000;*/
+}
+.gallery-images{
+	height: 180px;
+	width: 180px;
+	margin: 0 auto;
+}
+.mainbox-boder{
+	border-left: 3px solid #f2f6fa;
+	border-right: 3px solid #f2f6fa;
+	padding: 30px 0 0;
+}
+.art-swapping-img{
+	width: 93%;
+}
+.portfolio-imgmain{
+	background-color: #D6D6D6;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	padding-bottom: 35px;
+}
+.pro-title{
+	text-align: center;
+	margin: 0px;
+	font-size: 25px;
+	font-family: 'Open Sans';
+	color: #333333;
+	font-weight: 700;
+	padding: 8px 0;
+}
+.prouser-img{
+	width: 180px;
+	height: 180px;
+	margin: 0 auto 0;
+
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
+	.prouser-img{
+		width: 80px;
+		height: 80px;
+		margin: 0 auto 0;
+	}
+	.pro-title{
+		font-size: 14px;
+	}
+	.portfolio-imgmain{
+		padding-bottom: 20px;
+		width: 130px;
+		height: 140px;
+	}
+	.mainbox-boder{
+		margin:75px 0 0 0;
+	}
+}
+@media only screen and (min-device-width: 641px) and (max-device-width: 767px) {
+	.portfolio-imgmain {
+		padding-bottom: 45px;
+	}
+}
+/*30-04-2017 Manish Vora End */
+
+
+.radio-main{
+	margin: 15px 0 0;
+}
+.fancybox{
+	/*margin: 15px 0 0 0;*/
+	/*display: inline-block;*/
+}
+i.edit-icon{
+	padding: 0 0 0 0;
+	font-size: 20px;
+}
+.img-title{
+	background: #00ACD6;
+	width: 100%;
+	margin: 10px 0 0 !important;
+	color: #FFF !important;
+	padding: 5px 0 12px !important;
+	display: inline-block;
+}
+.portfolio-box {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.portfolio-item {
+	/*padding-left: 15px;
+	padding-right: 15px;*/
+	background-color: #D6D6D6;
+	border: 2px solid #dbdfe3;
+}
+.img-desbox{
+	display: inline-block;
+	/*padding: 5px 0 0 0;*/
+	font-size: 16px;
+	background-color: #FFF;
+	width: 100%;
+	padding: 8px;
+	margin: 0;
+	border-radius: 0 0 8px 8px;
+}
+.page-header, .page-headermusic {
+	margin: 10px 0 20px 0;
+	font-size: 22px;
+	padding: 0 0 18px 15px;
+	display: inline-block;
+	width: 100%;
+}
+.comm-padding{
+	padding: 0 5px 0 0;
+}
+.comm-padding > p{
+	margin: 0;
+}
+.radio-inline, .checkbox-inline{
+	padding-left: 10px !important;
+}
+
+
+
+
+/*grid images start By Manish Vora*/
+.grid-item {
+	width: 25%;
+	padding: 7px 5px;
+	/*padding: 7px;
+	border: 7px solid #FFF;
+	background-color: #e5e5e5;
+	border-radius: 15px;*/
+}
+.grid-item img{
+	width:100%;
+}
+
+.grid {
+	position: relative;
+	clear: both;
+	list-style: none;
+	text-align: center;
+}
+
+.grid figure {
+	position: relative;
+	float: left;
+	display: inline-block;
+	overflow: hidden;
+	height: auto;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+}
+
+.grid figure img {
+	display: inline-block;
+	max-width: 100%;
+	padding: 0 0;
+	/*padding: 5px 0;*/
+	position: relative;
+	border-radius: 10px;
+	width: 100%;
+}
+
+
+@media all and (max-width: 479px){
+	.grid figure figcaption{
+		padding: 2em 6em 0;
+	}
+}
+
+@media all and (max-width: 551px){
+	.grid figure figcaption {
+		padding: 0;
+	}
+	.about-ho-con {
+		width: 85%;
+	}
+	/*.gallery-img-das > figcaption{
+		display: none;
+	}
+	figure.effect-ming:hover img{
+		opacity: 1;
+	}*/
+
+}
+
+
+
+/*grid images End By Manish Vora*/
+
+
+/*Preview Page Start By Manish*/
+.prev-right{
+	border: 2px solid #c7edfc;
+	display: inline-block;
+}
+.right-title{
+	background: #c7edfc;
+	padding: 10px 15px;
+	margin: 0;
+	font-size: 26px;
+}
+#introduction_sb > p{
+	padding: 10px 15px;
+}
+/*Preview Page End By Manish Vora*/
+.titleh3{
+	font-size: 16px;
+	text-align: center;
+}
+.breadcrumb, .page-header{
+	display: none;
+}
+/*search page Start*/
+.ad-images{
+	text-align: center;
+	border: 2px solid #c7edfc;
+	display: inline-block;
+	width: 100%;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+.ad-imagessub{
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+	border-radius: 5px;
+}
+.home-cont-row h3 {
+	margin: 12px 0 12px 0 !important;
+	text-transform: capitalize;
+	font-size: 18px;
+}
+.ad-imagessub h3{
+	padding: 0 0 15px;
+	font-size: 14px;
+}
+.addsubimages{
+	border-radius: 5px;
+	min-height: 110px;
+	border:2px solid #c7edfc;
+}
+
+/*Home Page New Design Start By Manish Vora*/
+.homeport-item{
+	background-color: #D6D6D6;
+	border-bottom:3px solid #8d8d8d;
+	border-radius: 10px;
+	margin: 0 0 26px 0;
+	min-height: 220px;
+	box-shadow: 0 3px 3px #dbdbdb;
+}
+.homeport-item h3 {
+	font-size: 22px;
+	text-align: center;
+	padding: 8px;
+	margin: 0 !important;
+}
+.homeport-item-imgbox{
+	min-height: 210px;
+	padding:22px 25px 0;
+	/*border-bottom: 3px solid #8d8d8d;*/
+    border-radius: 10px;
+}
+.homeport-item-img{
+	min-height: 190px;
+}
+.mobileview-artist{
+	display: none;
+}
+.desktopview-art{
+	display: block;
+}
+.home_page_logo > a > img{
+	/*height: 150px;
+	width: 150px;*/
+	margin: 10px 0;
+}
+
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 680px) {
+	
+
+	.homeport-item h3 {
+		font-size: 16px;
+		padding: 3px 3px;
+	}
+	.homeport-item-imgbox{
+		min-height: 0 !important;
+		padding:30px 0;
+	}
+	.homeport-item-img{
+		min-height: 0px !important;
+		padding:35px 0 30px;
+	}
+	.serch-box{
+		padding: 0 2px;
+	}
+	.mobileview-artist{
+		display: block;
+	}
+	.desktopview-art{
+		display: none;
+	}
+	.home_page_logo > a > img{
+		height: auto;
+		width: auto;
+	}
+	.artwork-to-the-world-texts h4{
+		font-size:24px;
+	}
+}
+/*Home Page New Design End By Manish Vora*/
+
+/*Artist list Pages Start By Manish Vora*/
+.artistlist-rightbox.serch-box {
+	width: 12%;
+	height: 12%;
+	float: left;
+	margin: 0 2px 10px;
+}
+.artistlist-rightbox > a{
+
+}
+.artistlist-rightbox > a > .col-xs-12{
+	width: 100%;
+	height: 100px;
+	border: 2px solid #c7edfc;
+	border-radius: 8px;
+}
+.artistlist-rightbox > a > h3{
+	font-size: 14px;
+	text-align: center;
+}
+.artistlist-profile{
+	min-height: 225px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	border-radius: 5px 5px 0 0;
+	margin: 0 0 8px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 680px) {
+	.artistlist-rightbox.serch-box {
+		width: 33.33%;
+		float: left;
+		margin: 0;
+	}
+	.artistlist-rightbox > a > .col-xs-12 {
+		height: 90px;
+	}
+	.artistlist-profile{
+		min-height:160px;
+	}
+}
+/*Artist list Pages End By Manish Vora*/
+
+/*Artist View Page Start By Manish Vora*/
+
+.artistpreview-tab{
+	margin: 0 0 30px;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	color: #016CD4;
+	cursor: default;
+	background-color: #C7EDFC;
+	border: 1px solid #C7EDFC;
+}
+.column.col-md-12.div_marginsidebar, #introduction_sb {
+	border: 1px solid #C7EDFC;
+	min-height: 420px;
+}
+.column.col-md-12.div_marginsidebar table tbody tr td p img, .column.col-md-12.div_marginsidebar table tbody tr td img{
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+.div_marginsidebar > h2, #introduction_sb > h2 {
+	border-bottom: 1px solid #C7EDFC;
+	padding: 0 0 10px;
+	font-size: 26px;
+}
+.tab-content .tab-pane .sub-tabs > ul {
+	margin:0 0 15px;
+}
+.sub-tabs > ul > li{
+	list-style: none;
+}
+.sub-tabs > ul > li > a {
+	display: inline-block;
+	margin: 15px 0 0;
+}
+
+@media all and (max-width: 991px){
+	.grid-item {
+		width: 100%;
+	}
+	.grid{
+		margin: 15px 0 0;
+	}
+	.sidebar_right{position:inherit;margin-bottom:0px;}
+	.column.col-md-12.div_marginsidebar, #introduction_sb{min-height:inherit;}
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 680px) {
+	.artistpreview-btn {
+		margin-top: 50px;
+		margin-bottom: 30px;
+	}
+
+	.btn-sm {
+		padding: 5px 10px;
+	}
+
+	.header {
+		font-size: 22px;
+	}
+
+	.column.col-md-12.div_marginsidebar {
+		border: 1px solid #C7EDFC;
+		min-height: 100%;
+	}
+	.footer-button-title h4{
+		font-size: 16px;
+		margin-top: 20px;
+	}
+	.sticky {
+		position:unset !important;
+	}
+	.form-box{
+		width: 100%;
+	}
+}
+/*Artist View Page End BY Manish Vora*/
+
+
+
+/*New Home Page Design Start*/
+.blue-border-main{
+	border-left: 8px solid #c7edfc;
+    border-right: 8px solid #c7edfc;
+	box-shadow:0 1px 8px #000;
+	position:absolute;
+}
+.artlogosection{
+	background-color:#b7b7b7;
+    display: inline-block;
+    margin-left: -15px;
+    padding: 20px 0;
+}
+
+.navbar-brand > img{
+	display: block;
+    margin:0 0 0;
+    width:300px;
+}
+.homevideo-bg{
+	/*background:url(../img/videobg.jpg);*/
+	display:inline-block;
+	/*padding: 30px 0 0;*/
+}
+.homevideo-right{
+	background:#FFFFFF;
+	opacity: 0.8;
+}
+.subfootermain{
+	background: #9bd3e9;
+	padding:15px 0;
+	border-bottom:5px solid #c7edfc;
+	overflow:hidden;
+    width: 100%;
+	position:relative;	
+}
+.footer-link ul li a img {
+    margin: 0 5px 0 0;
+    width: 26px;
+}
+.navbar-right {
+    padding: 12px 0;
+}
+.art-swapping-main{
+	color: #0072bb;
+    font-family: "Open Sans Semibold";
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom:40px;
+    margin-top: 0;
+	text-align:center
+}
+.art-swapping-main::after{
+	 background: #0072bb;
+    content: "";
+    height: 5px;
+    left: 46%;
+    margin: 50px 0 0;
+    position: absolute;
+    text-align: center;
+    width: 90px;
+}
+#actiontoall{
+	margin: 15px 0 0;
+}
+
+
+@media only screen and (max-width: 767px) {
+	.artists-favorite-text{
+		 padding: 30px 0 0;
+	}
+	.artists-favorite-text h1::after{
+		top:65px;	
+		left: 18px;
+	}
+	.artists-favorite-text h1{
+		font-size:24px;
+	}
+	.navbar-brand-main{
+		padding: 5px 0 15px;
+	}
+	.banner-and-text {
+   	 margin: 85px 0 50px;
+	}
+	.artists-favorite-text p{
+		margin-bottom: 0;
+	}
+	.homevideo-right{
+		padding-bottom:20px;
+	}
+	.art-swapping-main{
+		font-size: 24px;
+	}
+	.art-swapping-main::after{
+		 left: 34%;
+	}
+	.blue-border-main{
+		position:relative;
+	}
+	.footer-link-title{
+		display:inline-block;
+		width:100%;
+	}
+	.footer-link-title h4{
+		margin-bottom:10px;
+	}
+	
+	.submit-wrap button{
+		width:100px;
+		 font-size: 16px;
+	}
+	.artists-favorite-text{
+		padding: 30px 0 0;
+	}
+	
+	.mc-embedded-subscribe-form {
+    	margin-bottom: 10px;
+    	margin-top: 0;
+	}
+	.mainbox-boder{
+		margin: 55px 0 0;
+	}
+	.content-header{
+		padding:15px 0 0;
+	}
+	.btn.btn-primary{
+		width:100%;
+	}
+	.radiohostplay{
+		margin:40px 0 0;	
+	}
+	.box {
+		margin-top:20px;
+	}
+	#visualization{
+		padding: 100px 0 0;
+	}
+	li.item{
+		width:100% !important;
+	}
+	
+	
+	/* 22/9 */
+	
+	.artistpreview-btn{margin:20px 0 ;}
+	.artistpreview-btn button.follow-artist + span {display: none;}
+	.radiohostplay{margin:0px;}
+	.artistpreview-tab.nav > li{width:33.33%;display:inline-block;}
+	
+	#timelineShade{margin-top: -72px; min-height: 74px; }
+	#timelineBackground{height:inherit;margin-top:0px;}
+	#timelineProfilePic{height: 80px;width:80px; margin-top: -51px;margin-left: 20px;}
+}
+
+@media only screen and (max-width:414px) 
+{
+	.artistpreview-tab.nav > li{width:50%;display:inline-block;text-align:center;}
+}
+/*New Home Page DesignEnd*/
+
+
+/*Home page Start 22-08-2017*/
+.arthomeimg{
+	height:190px;
+    width:215px;
+}
+.header-leftimg{
+	margin:30px 0 0;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 680px) {
+	.homeport-item-imgbox {
+		padding:15px 0 3px !important;
+	}
+	.homeport-item{
+		min-height:140px !important;
+		height:130px;
+		width:auto;
+	}
+	.arthomeimg{
+		height:90px !important;
+    	width:100px !important;
+	}
+	
+}
+/*Home page Start 23-08-2017*/
+
+
+.home_gallery_box
+{
+	background:none;
+	padding:0px;
+}
+
+.home_gallery_box .home_page_logo > a > img {
+     border: 1px solid #ccc;
+    border-radius: 9px;
+    box-shadow: 0 3px 3px #dbdbdb;
+    margin: 0 0 25px;
+    padding: 5px;
+}
+.mgt40{margin-top:40px !important;}
+.sub-tabs > ul.subtabul2 > li{padding:0 15px;}
+.box.box-success.mgt0{margin-top:2px;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);}
+.box .box-header.pdb_0{padding-bottom:0px;}
+#btn_search_show{width:100%;}
+.mgt0 .box-footer{padding-top:0px;}
+.right-side{background:#fff !important;}
+.artistpreview-btn .btn.btn-primary {
+    background-color: #79d3f6;
+    border-color: #79d3f6;
+    color: #000;
+}
+.artistpreview-btn .btn.btn-primary:hover
+{
+	background:#48c5f7;
+	border-color: #48c5f7;
+}
+.artistpreview-btn .btn.btn-gary {
+    background-color: #ccc;
+    border-color: #ccc;
+    color: #000;
+}
+.artistpreview-btn .btn.btn-gary:hover
+{
+	 background-color: #b5b4b4;
+    border-color: #b5b4b4;	
+}
+.mainbox-boder.no_brd{border:none;}
+.no_pd_both{padding:0px !important;}
+.test .col-sm-12.ui-sortable{padding:0px !important;}
+
+.data_left_menu
+{
+	float:left;
+	width:100%;
+}
+.ad_search_box
+{
+	float:right;
+	background:#fff;
+	border:1px solid #367fa9;
+	border-radius:5px;
+	padding:10px;
+	margin:0 0 0 0;
+	width:100%;
+}
+.ad_search_box .big_search
+{
+	background:none;
+	color:#367fa9;
+	font-size:16px;
+	line-height:18px;
+	border:none;
+	margin:0px;
+	width:90%;
+	float:left;
+}
+.ad_search_box .big_search:focus{outline:none;}
+.ad_search_box .small_search
+{
+	width:10%;
+	float:right;
+	background:url('../img/search_small.png');
+	background-repeat:no-repeat;
+	height:17px;
+	background-position:right;
+}
+.ad_search_box .small_search:focus{outline:none;}
+
+.ad-images .artistlist-profile
+{
+	margin:0px;
+	border-radius:5px;
+}
+.home-cont-row .artistlist-rightbox > a > h3{font-size:12px;line-height:19px;}
+.home-cont-row .artistlist-rightbox > a > .col-xs-12{border: 2px solid rgba(199, 237, 252, 0.7);}
+.box-title.w16{font-size:16px !important;position:relative;top:6px; }
+#btn_search_show{min-width:118px;top: -31px; position: relative;float:right;width:inherit;}
+#frm_search_artist .btn.btn-primary{min-width:118px;width:inherit;}
+#frm_search_artist .box-body{border-top:1px solid #ccc;margin:10px 0 0 0;}
+.ad-images{border: 2px solid rgba(199, 237, 252, 0.7);}
+#timelineProfilePic{border:none !important;background:none !important;}
+.artistpreview-tab{margin-bottom:10px;}
+.sub-tabs > ul > li > a{margin:0px;}
+.column.col-md-12.div_marginsidebar table tbody tr td p img, .column.col-md-12.div_marginsidebar table tbody tr td img{width:215px !important;margin:auto;}
+.image-align-center{text-align:center;}
+
+.artistpreview-btn_new{text-align:right;}
+.artistpreview-btn_new a
+{
+	background: #0682c5 ;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 0 0 1px;
+    min-width: 110px;
+    padding: 6px 10px;
+    text-align: center;
+}
+.artistpreview-btn_new a:hover{background:#1861ae;}
+.spacer10{height:10px;clear:both;}
+.spacer6{height:6px;clear:both;}
+.new_artish_btn.artistpreview-btn .btn.btn-primary
+{
+	background: #0682c5 ;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 0 0 1px;
+    min-width: 110px;
+    padding: 6px 10px;
+    text-align: center;
+	border:none;
+}
+.new_artish_btn.artistpreview-btn .btn.btn-primary:hover{background:#1861ae;}
+
+
+@media only screen and (min-device-width:1024px) and (max-device-width:1100px) 
+{
+	.home-cont-row .homeport-item
+	{
+		min-height:inherit !important;
+		height:inherit !important;
+	}
+	
+	.home-cont-row .arthomeimg
+	{
+		width:100% !important;
+		height:183px !important;
+	}
+	
+	.home-cont-row .homeport-item-img
+	{
+		margin: 0 15px;
+	}
+	.homeport-item-imgbox {
+		padding:15px 0 3px !important;
+	}
+	.homeport-item-imgbox, .homeport-item-img{min-height:inherit !important;}
+	
+	.artistlist-rightbox.serch-box{width:15%;}
+	.wi30{width:30%;}
+	.wi70{width:70%;}
+	
+	.blue-border-main{border:none;}
+	.right-side.strech .content{padding:0px;}
+}
+@media only screen and (max-width:979px) 
+{
+	.sidebar_right.mgt40{margin-top:0px !important;}
+}
+
+@media only screen and (min-device-width:768px) and (max-device-width:979px) 
+{
+	.home-cont-row .homeport-item
+	{
+		min-height:inherit !important;
+		height:inherit !important;
+	}
+	
+	.home-cont-row .arthomeimg
+	{
+		width:100% !important;
+		height:130px !important;
+	}
+	
+	.home-cont-row .homeport-item-img
+	{
+		margin: 0 15px;
+	}
+	.homeport-item-imgbox {
+		padding:15px 0 3px !important;
+	}
+	.homeport-item-imgbox, .homeport-item-img{min-height:inherit !important;}
+	.homeport-item h3{font-size:16px;}
+	
+	
+	.artistlist-rightbox.serch-box{width:15%;}
+	.ad-images .artistlist-profile{height:100px;min-height:inherit;}
+	
+	.sub-tabs > ul > li > a{margin:0px;}
+	.sub-tabs{margin:0px;}
+	#timelineNav{margin-bottom:0px;}
+	.blue-border-main
+	{
+		border:none;
+		box-shadow:none;
+	}
+	
+	.right-side.strech .content{padding:0px;}
+}
+
+@media only screen and (max-width:767px) 
+{
+	.home-cont-row .homeport-item
+	{
+		min-height:inherit !important;
+		height:inherit !important;
+	}
+	
+	.home-cont-row .arthomeimg
+	{
+		width:100% !important;
+		height:245px !important;
+	}
+	
+	.home-cont-row .homeport-item-img
+	{
+		margin: 0 15px;
+	}
+	.homeport-item h3
+	{
+		padding: 5px 3px 6px;
+	}
+	
+	.homeport-item-imgbox {
+		padding:15px 0 3px !important;
+	}
+	.mobileview-artist .artistlist-rightbox > a > h3{font-size:12px;margin:5px 0 10px 0;}
+	
+	.ad-images .artistlist-profile{height:80px;min-height:inherit;}
+	
+	.sub-tabs > ul > li > a{margin:0px;}
+	.sub-tabs{margin:0px;}
+	#timelineNav{margin-bottom:0px;}
+	
+	.new_artish_btn.artistpreview-btn .btn.btn-primary{width:48% !important;}
+	.artistpreview-btn_new a{width:48% !important;margin:7px 0 0 0;}
+	.new_artish_btn{margin:0 0 15px 0;}
+	.mgt55{margin-top:55px;}
+	
+	.ad_search_box{margin-top:15px;}
+	
+	.logo_top .navbar-brand-main a.navbar-brand img
+	{
+		max-width:220px !important;
+		width:inherit !important;
+		margin:0px !important;
+		position:relative;
+		top:7px;
+	}
+
+	.navbar-toggle
+	{
+		margin: -62px 0 16px 0;
+	}
+}
+@media only screen and (min-device-width:690px) and (max-device-width: 736px) 
+{
+	.col-md-8.col-sm-7.logo_top{width: 50%;float:left;}	
+	
+	
+	.header-main{display:block;}
+	.header-main-sub{width:98%;}
+	
+	.mgt55{margin-top:75px;}
+	
+	
+}
+@media only screen and (max-width:667px) 
+{
+	.home-cont-row .arthomeimg
+	{
+		height:205px !important;
+	}
+}
+@media only screen and (min-device-width:600px) and (max-device-width: 667px) 
+{
+	.col-md-8.col-sm-7.logo_top{width: 50%;float:left;}	
+	
+	
+	.header-main{display:block;}
+	.header-main-sub{width:98%;}
+	
+	
+	
+}
+@media only screen and (max-width:640px) 
+{
+	.home-cont-row .arthomeimg
+	{
+		height:205px !important;
+	}
+	
+	
+}
+@media only screen and (min-device-width:500px) and (max-device-width: 568px) 
+{
+	.col-md-8.col-sm-7.logo_top{width: 50%;float:left;}	
+	
+	
+	.header-main{display:block;}
+	.header-main-sub{width:97.1%;}
+
+
+	
+	.home-cont-row .homeport-item-img
+	{
+		margin: 0 12px;
+	}
+	
+	.home-cont-row .arthomeimg
+	{
+		height:175px !important;
+	}
+	
+}
+
+
+@media only screen and (max-width:480px) 
+{
+	
+	.logo_top .navbar-brand-main a.navbar-brand img
+	{
+		max-width:220px !important;
+		width:inherit !important;
+		margin:0px !important;
+		position:relative;
+		top:7px;
+	}
+
+	.navbar-toggle
+	{
+		margin: -62px 0 16px 0;
+	}
+
+	.navbar-brand-main{width:100%;text-align:left;margin:auto;}
+	
+	.logo_top .navbar-brand{height:inherit;text-align:center;}
+	.header-main-sub{width:97%;}
+	.header-main{display:block !important}
+	
+	
+	
+	.banner-and-text{    margin: 85px 0 50px; }
+	
+	
+	.home-cont-row .arthomeimg
+	{
+		height:160px !important;
+	}
+}
+
+@media only screen and (max-width:414px) 
+{
+	.home-cont-row .arthomeimg
+	{
+		width:100% !important;
+		height:135px !important;
+	}
+}
+@media only screen and (max-width:375px) 
+{
+	
+	.home-cont-row .arthomeimg
+	{
+		height:115px !important;
+	}
+}
+@media only screen and (max-width:320px) 
+{
+	.home-cont-row .arthomeimg
+	{
+		height:90px !important;
+	}
+	.home-cont-row .artistlist-rightbox > a > h3{font-size:10px;}
+	.column.col-md-12.div_marginsidebar table tbody tr td p img, .column.col-md-12.div_marginsidebar table tbody tr td img{width:195px !important;}
+}
+
+
+
+/*14-12-17*/
+
+.homeport-item-imgbox { min-height:inherit; }
+.homeport-item-img { min-height:inherit; }
+.home-cont-row .arthomeimg { width: 100%; height:200px; } 
+
+@media only screen and (max-width:1199px) {
+    .homeport-item { min-height:inherit; }
+    .home-cont-row .arthomeimg { height:150px; }     
+    
+}
+
+@media only screen and (max-device-width: 1100px) and (min-device-width: 1024px) { 
+
+    .home-cont-row .arthomeimg { height:153px!important; }
+    
+}
+/*
+@media only screen and (max-width:991px) {
+    .home-cont-row .arthomeimg { height:95px; }     
+    
+}
+
+@media only screen and (max-device-width: 979px) and (min-device-width: 768px) {
+    
+    .home-cont-row .arthomeimg { height:105px!important; }
+    
+}
+
+@media only screen and (max-width:767px) {
+    
+    .home-cont-row .arthomeimg { height:275px!important;  }         
+}
+@media only screen and (max-width:667px) { 
+
+    .home-cont-row .arthomeimg { height:248px!important;  }            
+
+}
+
+@media only screen and (max-width:600px) {
+    
+    .home-cont-row .arthomeimg { height:200px!important; }            
+
+}
+
+@media only screen and (max-width:550px) { 
+
+  .home-cont-row .arthomeimg { height:150px!important; }            
+    
+}
+
+@media only screen and (max-width:479px) {
+  .home-cont-row .arthomeimg { height:95px!important; }                
+    
+} 
+
+@media only screen and (max-width:415px) {
+  .home-cont-row .arthomeimg { height:122px!important; }                
+    
+} 
+
+@media only screen and (max-width:375px) {
+  .home-cont-row .arthomeimg { height:103px!important; }                
+    
+} 
+
+
+@media only screen and (max-width:360px) {
+    
+    .home-cont-row .arthomeimg {height:76px!important; }
+    
+}*/

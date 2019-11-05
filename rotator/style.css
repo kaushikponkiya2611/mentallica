@@ -1,0 +1,16 @@
+body
+{
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+#test
+{
+  width: 400px;
+}
+
+#test img
+{
+  float: left;
+  margin-right: 10px;
+}

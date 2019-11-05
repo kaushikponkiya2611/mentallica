@@ -1,0 +1,24 @@
+[15-Mar-2018 00:10:21 America/Chicago] PHP Parse error:  syntax error, unexpected 'input' (T_STRING), expecting ',' or ';' in /home10/mentalli/public_html/projectone/controllers/ajax_controller/preview-ajax-controller.php on line 313
+[15-Mar-2018 00:11:43 America/Chicago] PHP Parse error:  syntax error, unexpected 'daterange' (T_STRING), expecting ',' or ';' in /home10/mentalli/public_html/projectone/controllers/ajax_controller/preview-ajax-controller.php on line 313
+[01-Apr-2018 23:30:47 America/Chicago] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home10/mentalli/public_html/projectone/controllers/ajax_controller/save-radio.php on line 3
+[01-Apr-2018 23:30:50 America/Chicago] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /home10/mentalli/public_html/projectone/controllers/ajax_controller/save-radio.php on line 3
+[07-Apr-2018 02:58:10 America/Chicago] PHP Parse error:  syntax error, unexpected ')', expecting '&' or variable (T_VARIABLE) in /home10/mentalli/public_html/projectone/controllers/ajax_controller/save-radio.php on line 33
+[07-Apr-2018 03:16:07 America/Chicago] PHP Parse error:  syntax error, unexpected ')', expecting '&' or variable (T_VARIABLE) in /home10/mentalli/public_html/projectone/controllers/ajax_controller/save-radio.php on line 33
+[07-Apr-2018 03:17:26 America/Chicago] PHP Parse error:  syntax error, unexpected ')', expecting '&' or variable (T_VARIABLE) in /home10/mentalli/public_html/projectone/controllers/ajax_controller/save-radio.php on line 33
+[15-Apr-2018 22:55:29 America/Chicago] PHP Parse error:  syntax error, unexpected '?' in /home10/mentalli/public_html/projectone/controllers/ajax_controller/preview-ajax-controller.php on line 308
+[15-Apr-2018 22:55:31 America/Chicago] PHP Parse error:  syntax error, unexpected '?' in /home10/mentalli/public_html/projectone/controllers/ajax_controller/preview-ajax-controller.php on line 308
+[15-Apr-2018 22:55:32 America/Chicago] PHP Parse error:  syntax error, unexpected '?' in /home10/mentalli/public_html/projectone/controllers/ajax_controller/preview-ajax-controller.php on line 308
+[16-Apr-2018 23:41:13 America/Chicago] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home10/mentalli/public_html/projectone/controllers/ajax_controller/preview-ajax-controller.php on line 308
+[16-Apr-2018 23:41:14 America/Chicago] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home10/mentalli/public_html/projectone/controllers/ajax_controller/preview-ajax-controller.php on line 308
+[16-Apr-2018 23:41:16 America/Chicago] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home10/mentalli/public_html/projectone/controllers/ajax_controller/preview-ajax-controller.php on line 308
+[16-Apr-2018 23:41:17 America/Chicago] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home10/mentalli/public_html/projectone/controllers/ajax_controller/preview-ajax-controller.php on line 308
+[16-Apr-2018 23:41:17 America/Chicago] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home10/mentalli/public_html/projectone/controllers/ajax_controller/preview-ajax-controller.php on line 308
+[16-Apr-2018 23:41:19 America/Chicago] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home10/mentalli/public_html/projectone/controllers/ajax_controller/preview-ajax-controller.php on line 308
+[23-Apr-2018 22:41:23 America/Chicago] PHP Parse error:  syntax error, unexpected '$qry' (T_VARIABLE), expecting ',' or ';' in /home10/mentalli/public_html/projectone/controllers/ajax_controller/get-notifications.php on line 19
+[23-Apr-2018 22:52:31 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home10/mentalli/public_html/projectone/controllers/ajax_controller/get-notifications.php on line 41
+[23-Apr-2018 22:52:33 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home10/mentalli/public_html/projectone/controllers/ajax_controller/get-notifications.php on line 41
+[23-Apr-2018 22:52:33 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home10/mentalli/public_html/projectone/controllers/ajax_controller/get-notifications.php on line 41
+[23-Apr-2018 23:15:52 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home10/mentalli/public_html/projectone/controllers/ajax_controller/preview-ajax-controller.php on line 307
+[23-Apr-2018 23:15:57 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home10/mentalli/public_html/projectone/controllers/ajax_controller/preview-ajax-controller.php on line 307
+[23-Apr-2018 23:18:27 America/Chicago] PHP Parse error:  syntax error, unexpected '.' in /home10/mentalli/public_html/projectone/controllers/ajax_controller/get-notifications.php on line 29
+[23-Apr-2018 23:18:38 America/Chicago] PHP Parse error:  syntax error, unexpected '.' in /home10/mentalli/public_html/projectone/controllers/ajax_controller/get-notifications.php on line 29

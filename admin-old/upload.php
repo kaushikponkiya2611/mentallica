@@ -1,0 +1,31 @@
+{
+"Event_name":"",
+"Event_date":"",
+"Event_time":"",
+"Event_location":"",
+"Event_gallery":[
+    "Picture_name":[
+        {
+            "Picture_url":"",
+            "Picture_event":""
+        },
+        {
+            "Picture_url":"",
+            "Picture_event":"",
+        }
+    ]
+]
+
+"Event_qutoes": [
+    {
+        "Qutoes_event":"",
+        "Qutoes_name":"",
+    },
+    {
+        "Qutoes_event":"",
+        "Qutoes_name":"",
+    },
+]
+"Event_food":[]
+"Event_event":[]
+}
