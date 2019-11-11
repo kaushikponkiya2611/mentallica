@@ -9,4 +9,4 @@ env:
   - 'SFTP_PASSWORD=hJzjHSrTpf'
   - 'SFTP_KEY=ssh-dss AAAAB3NzaC1kc3MAAACBANbFVQVeC2D++KT7JGgSK9cIw+gwJQnT7cw9sytVE1/5NOatMB/xaatTgx19zr/szXmEnLcvkKyvdWYhnbbRjyG/o7po6GlynCnkF1922+uEGfJQiNyJXMxyB6e0eMZGM7ssV49pxbicZSD9z5FfA8R+l+b9irWqQpyT49SSyfxNAAAAFQD2ESRfwZ5zxD9lQiEXCD7VxW4A9QAAAIBVW8M4pSycnOEKnQIfYZT9AX/t8/xqBlpcXcHgkvnrJD+Pmh+KzXe+4ypj2GdZ6ejW6SZrooT9ircrRmYz4PsxeKdSkuxCTctab2H3ANtdzj2CnUTXuGn100Pm01ygEt1u4JvQsMf7Hm0+0q/4HaT9mQCkkD/54uq5XiUOh78aFAAAAIBLu67n34OBH9rbUO1rE9bT3jOyp48a9ehEltOk8O6lneMPHk3ShjsuAcXGN00TkVvX9NG222y2LVHpfPMARwRZ/JjDKiSBikaHoKAfkBoPzO4RhZvTPeGhnHudXILmY2xgzJRKZZeamyMyvMC+FzWmp8CwQEdU0Els51eKbTES+Q=='
 after_success:
-- find . -type d \( -path "./.*"\) -prune -o -name "*" -print -exec curl --ftp-create-dirs -T {} ftp://mentallica.com/public_html/travis-mentallica/ --user ${SFTP_USER}:${SFTP_PASSWORD} \;
+- find . -type d \( -path "./.*") -prune -o -name "*" -print -exec curl --ftp-create-dirs -T {} ftp://mentallica.com/public_html/travis-mentallica/ --user ${SFTP_USER}:${SFTP_PASSWORD} \;
